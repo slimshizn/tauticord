@@ -208,7 +208,11 @@ class TautulliStreamInfo:
             return self._session._session_title(session_number=self._session_number)
         except Exception as title_exception:
             return "Unknown"
-
+    
+    @property
+    def user(self):
+        return self._session._session_user()
+    
     @property
     def player(self):
         return self._session._session_player()
@@ -224,7 +228,7 @@ class TautulliStreamInfo:
     @property
     def body(self):
         try:
-            return f"{self.player}\n{self.details}\n{self.progress}"
+            return f"{self.user}\n{self.player}\n{self.details}\n{self.progress}"
         except Exception as body_exception:
             error(body_exception)
             return f"Could not display data for session {self._session_number}"
