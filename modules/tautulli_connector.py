@@ -185,6 +185,9 @@ class Session:
         return statics.session_title_message.format(count=statics.emoji_numbers[session_number - 1],
                                                     icon=self.status_icon, username=self.username,
                                                     media_type_icon=self.type_icon, title=self.title)
+    
+    def _session_user(self):
+        return statics.session_user_message.format(username=self.username)
 
     def _session_player(self):
         return statics.session_player_message.format(product=self.product, player=self.player)
