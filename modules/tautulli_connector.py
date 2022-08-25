@@ -231,7 +231,7 @@ class TautulliStreamInfo:
     @property
     def body(self):
         try:
-            return f"{self.user}\n{self.player}\n{self.details}\n{self.progress}"
+            return f"\n{self.user}\n\n{self.player}\n{self.details}\n{self.progress}"
         except Exception as body_exception:
             error(body_exception)
             return f"Could not display data for session {self._session_number}"
