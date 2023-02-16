@@ -24,12 +24,10 @@ jobs:
         run: |
           REPO=$CI_REPOSITORY_NAME
           DOCKER_IMAGE=${{ github.repository_owner }}/${REPO}
-          if [ "$CI_REF_NAME" != "dev" || "beta" ]; then
+          if [ "$CI_REF_NAME" != "dev" ]; then
             VERSION=latest
-          else if [ "$CI_REF_NAME" != "dev" ]; then
-            VERSION=nightly
           else
-            VERSION=beta
+            VERSION=nightly
           fi
           TAGS="${DOCKER_IMAGE}:${VERSION}"
           echo ::set-output name=tags::${TAGS}
