@@ -2,7 +2,7 @@
 
 # Tauticord
 
-A Discord bot that displays live data from Tautulli
+A Discord bot that displays live data from Tautulli Project
 
 [![Release](https://img.shields.io/github/v/release/nwithan8/tauticord?color=yellow&include_prereleases&label=version&style=flat-square)](https://github.com/nwithan8/tauticord/releases)
 [![Docker](https://img.shields.io/docker/pulls/nwithan8/tauticord?style=flat-square)](https://hub.docker.com/r/nwithan8/tauticord)
