@@ -1,4 +1,8 @@
 FROM keymetrics/pm2:18-alpine
+
+LABEL maintainer=cyb3rgh05t
+LABEL org.opencontainers.image.source https://github.com/cyb3rgh05t/tauticord
+
 WORKDIR /app
 
 # Install Python and other utilities
